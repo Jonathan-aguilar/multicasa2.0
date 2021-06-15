@@ -21,8 +21,8 @@
 				</div>
 				<div class="menuHorizontal">
 					<ul class="topnav">
-						<li class="derecha"><a href="#">Inicio</a></li>
-						<li class="derecha"><a href="#">La Compañia</a></li>
+						<li class="derecha"><a href="inicio_publico.php">Inicio</a></li>
+						<li class="derecha"><a href="casas/casas.php">La Compañia</a></li>
 						<li class="derecha"><a href="#">Servicios</a></li>
 						<li class="derecha"><a href="contacto.php">Contacto</a></li>
 						<li class=" izquierda"><a href="login.php"><img class="incono-verde"src="images/icono_verde.png" >Admin.</a></li>
