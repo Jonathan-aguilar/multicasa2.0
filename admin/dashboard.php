@@ -14,10 +14,12 @@
 			<div class="logo-empresa">
 				<img class="logotipo" src="../images/logo.png">
 				<img class="tel" src="../images/tel.png" >
+				<!--<h1>&nbsp;&nbsp;BIENES RAICES MULTICASA</h1>
+					<h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TU MEJOR OPCIÓN EN AGENCIA DE BIENES RAICES</h5>-->
 			</div>
 			<div class="menuHorizontal">
 				<ul class="topnav">
-					<li class="derecha"><a href="inicio_privado.php">Inicio</a></li>
+					<li class="derecha"><a href="#">Inicio</a></li>
 					<li class="derecha"><a href="#">La Compañia</a></li>
 					<li class="derecha"><a href="#">Servicios</a></li>
 					<li class="derecha"><a href="#">Requisitos</a></li>
@@ -28,8 +30,11 @@
 			</div>
 		</header>
 		<div class="contenido">
-			<div id="ContainerGraf1" style="width: 100%; height: 380px;"></div>
+			<div id="grafica" name="grafica" style="width: 100%; height: 380px;"></div>
+			<br>
+			<div id="grafica2" name="grafica2" style="width: 100%; height: 380px;"></div>
 		</div>
+
 		
 		<footer class="footer">
 			<div class="logo-empresa">
@@ -37,7 +42,7 @@
 			</div>
 			<div class="menuFooter">
 				<ul class="topnav">
-					<li class="derecha"><a href="inicio_privado.php">Inicio</a></li>
+					<li class="derecha"><a href="#">Inicio</a></li>
 					<h5 class="fotterh5">:</h5>
 					<li class="derecha"><a href="#"> Compra </a></li>
 					<h5 class="fotterh5">:</h5>
@@ -62,6 +67,6 @@
     <script src="js/jquery-1.12.3.js"></script>
 	<script src="../bootstrap/js/bootstrap.min.js"></script>
     <script src="js/canvasjs.min.js"></script>
-    <script src="js/script3.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

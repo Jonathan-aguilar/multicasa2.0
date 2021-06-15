@@ -30,14 +30,13 @@
 			</div>
 			<div class="menuHorizontal">
 				<ul class="topnav">
-					<li class="derecha"><a href="admin/inicio_privado.php">Inicio</a></li>
-					
+					<li class="derecha"><a href="#">Inicio</a></li>
 					<li class="derecha"><a href="#">La Compañia</a></li>
 					<li class="derecha"><a href="#">Servicios</a></li>
 					<li class="derecha"><a href="#">Requisitos</a></li>
-					<li class=" izquierda"><a href="login.php"><img class="incono-verde"src="images/icono_verde.png" >Admin.</a></li>
+					<li class=" izquierda"><a href="#"><img class="incono-verde"src="images/icono_verde.png" >Admin.</a></li>
 					<li class=" izquierda"><a href="#"><img class="incono-verde"src="images/icono_verde.png" >Buscar</a></li>
-					<li class=" izquierda"><a href="admin/inicio_privado.php"><img class="incono-verde"src="images/icono_verde.png" >Inicio</a></li>
+					<li class=" izquierda"><a href="#"><img class="incono-verde"src="images/icono_verde.png" >Inicio</a></li>
 				</ul>
 			</div>
 		</header>
@@ -178,7 +177,7 @@
 					<li class="derecha"><a href="#"> Contactos </a></li>
 					<div class="copyright">
 						<p>Bienes Raíces Multicasa © 2019</p>
-						<a href="">Politicas De Privacidad</a>				
+						<a href="politicas.php">Politicas De Privacidad</a>				
 					</div>
 				</ul>
 			</div>

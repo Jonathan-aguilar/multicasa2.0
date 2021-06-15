@@ -9,6 +9,37 @@
     $obj->db_conn->set_charset("utf8");
     $resultado = mysqli_query($obj->db_conn,$obj->db_query) or die(mysqli_error($obj->db_conn));
     $row = mysqli_fetch_assoc($resultado)
+
+	/*if($row['estatus'] == 1){
+	    $est = "ACTIVO";
+    }
+	else{
+	    $est = "INACTIVO";
+    }
+	if($row['carrera'] == '828'){
+	    $crr = "828-Ingeniero en Sistemas Computacionales";
+	}
+	else if($row['carrera'] == '689'){
+		$crr = "689-Licenciado de Sistemas Computacionales Administrativos";
+	}
+	else if($row['carrera'] == '851'){
+		$crr = "851-Ingeniero Automotriz";
+	}
+	else if($row['carrera'] == '827'){
+		$crr = "827-Ingeniero en Electronica y Comunicaciones";
+	}
+	else if($row['carrera'] == '820'){
+		$crr = "820-Ingeniero Industrial y de Sistemas";
+	}
+	else if($row['carrera'] == '754'){
+		$crr = "754-Ingeniero en Tecnologias de la Informacion y Comunicaciones";
+	}
+	else if($row['carrera'] == '686'){
+		$crr = "686-Ingeniero Industrial(Antiguo)";
+	}
+	else if($row['carrera'] == '670'){
+		$crr = "670-Ingeniero En Sistemas Computacionales(Antiguo)";
+	}*/
 ?>
 <!DOCTYPE html>
 <html>

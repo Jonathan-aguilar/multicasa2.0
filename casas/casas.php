@@ -45,7 +45,7 @@ $res = count($arr_inmuebles);
         echo '<!-- Project One -->
       <div class="row">
         <div class="col-md-7">
-          <a href="casas/';
+          <a href="/casas/';
         echo $arr_inmuebles[$i]->getEncabezado();
         echo '.php">
             <img class="img-fluid rounded mb-3 mb-md-0" src="';
@@ -60,7 +60,7 @@ $res = count($arr_inmuebles);
           <p>';
         echo $arr_inmuebles[$i]->getDescripcion(); 
         echo '</p>
-          <a class="btn btn-primary" href="casas/';
+          <a class="btn btn-primary" href="';
         echo $arr_inmuebles[$i]->getEncabezado();
         echo '.php">Ver Casa</a>
         </div>

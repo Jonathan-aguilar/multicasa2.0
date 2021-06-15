@@ -1,52 +1,51 @@
 /*
- Navicat Premium Data Transfer
+Navicat MySQL Data Transfer
 
- Source Server         : local_server
- Source Server Type    : MySQL
- Source Server Version : 100418
- Source Host           : 127.0.0.1:3306
- Source Schema         : multicasa
+Source Server         : localhost_3306
+Source Server Version : 50505
+Source Host           : 127.0.0.1:3306
+Source Database       : multicasa
 
- Target Server Type    : MySQL
- Target Server Version : 100418
- File Encoding         : 65001
+Target Server Type    : MYSQL
+Target Server Version : 50505
+File Encoding         : 65001
 
- Date: 30/05/2021 18:29:04
+Date: 2019-12-09 13:32:23
 */
 
-SET NAMES utf8mb4;
-SET FOREIGN_KEY_CHECKS = 0;
+SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
 -- Table structure for administradores
 -- ----------------------------
 DROP TABLE IF EXISTS `administradores`;
-CREATE TABLE `administradores`  (
-  `id_admin` int NOT NULL AUTO_INCREMENT,
-  `usuario` varchar(15) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `clave` varchar(15) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `nombre_usuario` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `tipo_usuario` int NULL DEFAULT NULL,
-  PRIMARY KEY (`id_admin`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+CREATE TABLE `administradores` (
+  `id_admin` int(12) NOT NULL AUTO_INCREMENT,
+  `usuario` varchar(15) NOT NULL,
+  `clave` varchar(15) DEFAULT NULL,
+  `nombre_usuario` varchar(50) DEFAULT NULL,
+  `tipo_usuario` int(1) DEFAULT NULL,
+  PRIMARY KEY (`id_admin`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of administradores
 -- ----------------------------
+INSERT INTO `administradores` VALUES ('1', 'ivan', '123', 'ivan', '1');
 
 -- ----------------------------
 -- Table structure for cliente
 -- ----------------------------
 DROP TABLE IF EXISTS `cliente`;
-CREATE TABLE `cliente`  (
-  `id_cliente` int NOT NULL AUTO_INCREMENT,
-  `nombre_cliente` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT '',
-  `dir_cliente` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT '',
-  `correo_cliente` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT '',
-  `rfc` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `telefono` varchar(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT '',
-  PRIMARY KEY (`id_cliente`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+CREATE TABLE `cliente` (
+  `id_cliente` int(12) NOT NULL AUTO_INCREMENT,
+  `nombre_cliente` varchar(100) DEFAULT '',
+  `dir_cliente` varchar(100) DEFAULT '',
+  `correo_cliente` varchar(50) DEFAULT '',
+  `rfc` varchar(50) DEFAULT NULL,
+  `telefono` varchar(10) DEFAULT '',
+  PRIMARY KEY (`id_cliente`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of cliente
@@ -56,16 +55,16 @@ CREATE TABLE `cliente`  (
 -- Table structure for entidad
 -- ----------------------------
 DROP TABLE IF EXISTS `entidad`;
-CREATE TABLE `entidad`  (
-  `cve_ent` varchar(2) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `nom_ent` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `nom_abr` varchar(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `fechaModificacion` timestamp NOT NULL DEFAULT current_timestamp ON UPDATE CURRENT_TIMESTAMP,
-  `id_pais` varchar(2) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  PRIMARY KEY (`cve_ent`) USING BTREE,
-  INDEX `id_pais`(`id_pais`) USING BTREE,
-  CONSTRAINT `entidad_ibfk_1` FOREIGN KEY (`id_pais`) REFERENCES `pais` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+CREATE TABLE `entidad` (
+  `cve_ent` varchar(2) NOT NULL,
+  `nom_ent` varchar(50) NOT NULL,
+  `nom_abr` varchar(10) NOT NULL,
+  `fechaModificacion` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `id_pais` varchar(2) NOT NULL,
+  PRIMARY KEY (`cve_ent`),
+  KEY `id_pais` (`id_pais`),
+  CONSTRAINT `entidad_ibfk_1` FOREIGN KEY (`id_pais`) REFERENCES `pais` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of entidad
@@ -107,51 +106,53 @@ INSERT INTO `entidad` VALUES ('32', 'Zacatecas', 'Zac.', '2019-12-06 21:37:55', 
 -- Table structure for inmueble
 -- ----------------------------
 DROP TABLE IF EXISTS `inmueble`;
-CREATE TABLE `inmueble`  (
-  `id_inmueble` int NOT NULL AUTO_INCREMENT,
-  `encabezado` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `descripcion` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `direccion` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT '',
-  `costo_inmueble` int NULL DEFAULT NULL,
-  `recamaras` int NULL DEFAULT NULL,
-  `baños` int NULL DEFAULT NULL,
-  `estacionamientos` int NULL DEFAULT NULL,
-  `estatus` varchar(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT '',
-  `ciudad` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `estado` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `codigo_postal` int NULL DEFAULT NULL,
-  `area_terreno` int NULL DEFAULT NULL,
-  `email` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `latitud` varchar(20) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `longitud` varchar(20) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `exterior` longblob NULL,
-  `interior_1` longblob NULL,
-  `interior_2` longblob NULL,
-  PRIMARY KEY (`id_inmueble`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+CREATE TABLE `inmueble` (
+  `id_inmueble` int(12) NOT NULL AUTO_INCREMENT,
+  `encabezado` varchar(100) NOT NULL,
+  `descripcion` varchar(255) NOT NULL,
+  `direccion` varchar(100) DEFAULT '',
+  `costo_inmueble` int(9) DEFAULT NULL,
+  `recamaras` int(2) DEFAULT NULL,
+  `banos` int(2) DEFAULT NULL,
+  `estacionamientos` int(2) DEFAULT NULL,
+  `estatus` varchar(10) DEFAULT '',
+  `ciudad` varchar(50) DEFAULT NULL,
+  `estado` varchar(50) DEFAULT NULL,
+  `codigo_postal` int(6) DEFAULT NULL,
+  `area_terreno` int(10) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `latitud` varchar(20) DEFAULT NULL,
+  `longitud` varchar(20) DEFAULT NULL,
+  `exterior` varchar(255) DEFAULT NULL,
+  `interior_1` varchar(255) DEFAULT NULL,
+  `interior_2` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id_inmueble`)
+) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of inmueble
 -- ----------------------------
-INSERT INTO `inmueble` VALUES (1, 'Hola', 'Casa bien pro', '5 de Mayo #404', 230000, 5, 5, 6, 'Vendida', '', 'Coahuila', 26340, 202, 'ivan@gmail.com', '22000', '22000', 0x6A656A65, 0x6A616A61, 0x6A656A656A65);
-INSERT INTO `inmueble` VALUES (12, 'Casa 2 pisos', 'lalal', 'abel barragan #15', 500000, 4, 2, 2, 'En Venta', 'Cuatro Ciénegas', 'Coahuila de Zaragoza', 25120, 150, 'Jhonnyaguilar1797@gmail.com', '20000', '200000', 0x2E2E2F75706C6F6164732F436173612032207069736F735F312E6A7067, 0x2E2E2F75706C6F6164732F436173612032207069736F735F322E6A7067, 0x2E2E2F75706C6F6164732F436173612032207069736F735F332E6A7067);
+INSERT INTO `inmueble` VALUES ('35', 'Casa Bonita', 'Casas en venta en Fraccionamiento Villa Natura.\r\nLa casa cuenta con una planta baja y una planta alta, cuenta con cochera para 2 autos, sala, comedor, 3 recamaras, 2 baños completos, lavandería techada, jardín amplio.\r\nTerreno: 220 m2\r\nConstrucción: 180 m', 'Fraccionamiento Villa Natura, Bambú #1200', '24000', '3', '2', '2', 'En Venta', 'Apaseo el Grande', 'Guanajuato', '25000', '220', 'ruben7.70@hotmail.com', '25.421682', '-101.000155', '../uploads/Casa Bonita_1.jpg', '../uploads/Casa Bonita_2.jpg', '../uploads/Casa Bonita_3.jpg');
+INSERT INTO `inmueble` VALUES ('37', 'Casa de Lujo', 'Casa en venta en Fraccionamiento Ocampo.\r\nLa casa cuenta con una planta baja y una planta alta, cuenta con espacio para 2 autos al exterior, sala, comedor, 2 recamaras, 1 baño completo, lavandería, jardín amplio.\r\nTerreno: 240 m2\r\nConstrucción: 199 m2.\r\n$', 'Fraccionamiento Ocampo, Ramon Flores #480', '1950000', '2', '1', '2', 'En Venta', 'Santa Catarina', 'Nuevo León', '66120', '240', 'ruben7.70@hotmail.com', '25.686166', '-100.446961', '../uploads/Casa de Lujo_1.jpg', '../uploads/Casa de Lujo_2.jpg', '../uploads/Casa de Lujo_3.jpg');
+INSERT INTO `inmueble` VALUES ('38', 'Casa Especial', 'Casa en venta en Fraccionamiento América\r\nLa casa cuenta con una planta baja y una planta alta, cuenta con espacio para 2 autos al exterior, sala, comedor, 3 recamaras, 2 baños completos, lavandería techada, jardín amplio.\r\nTerreno: 320 m2\r\nConstrucción: ', 'Fraccionamiento América, Cristóbal Colon # 810', '3250000', '3', '2', '2', 'En Venta', 'Torreón', 'Coahuila de Zaragoza', '27020', '320', 'ruben7.70@hotmail.com', '25.544018', '-103.401758', '../uploads/Casa Especial_1.jpg', '../uploads/Casa Especial_2.jpg', '../uploads/Casa Especial_3.jpg');
+INSERT INTO `inmueble` VALUES ('39', 'Mega Mansión', 'Casa en venta en Fraccionamiento Napoleón\r\nLa casa cuenta con una planta baja, cuenta con espacio para 1 auto al exterior, sala, comedor, 2 recamaras, 1 baños completo, lavandería techada, jardín amplio.\r\nTerreno: 240 m2\r\nConstrucción: 160 m2.\r\n$2,150,000', 'Fraccionamiento Napoleón, Unión #340', '2150000', '2', '1', '1', 'En Venta', 'Guadalajara', 'Jalisco', '44580', '240', 'ruben.campos@uadec.edu.mx', '20.671203', '-103.341532', '../uploads/Mega Mansión_1.jpg', '../uploads/Mega Mansión_2.jpg', '../uploads/Mega Mansión_3.jpg');
 
 -- ----------------------------
 -- Table structure for municipio
 -- ----------------------------
 DROP TABLE IF EXISTS `municipio`;
-CREATE TABLE `municipio`  (
-  `cve_mun` varchar(3) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `nom_mun` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `cve_cab` varchar(4) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `nom_cab` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `fechaModificacion` timestamp NOT NULL DEFAULT current_timestamp ON UPDATE CURRENT_TIMESTAMP,
-  `cve_ent` varchar(2) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  PRIMARY KEY (`cve_mun`, `cve_ent`) USING BTREE,
-  UNIQUE INDEX `cve_mun`(`cve_mun`, `cve_ent`) USING BTREE,
-  INDEX `cve_ent`(`cve_ent`) USING BTREE,
-  CONSTRAINT `municipio_ibfk_1` FOREIGN KEY (`cve_ent`) REFERENCES `entidad` (`cve_ent`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+CREATE TABLE `municipio` (
+  `cve_mun` varchar(3) NOT NULL,
+  `nom_mun` varchar(50) NOT NULL,
+  `cve_cab` varchar(4) NOT NULL,
+  `nom_cab` varchar(50) NOT NULL,
+  `fechaModificacion` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `cve_ent` varchar(2) NOT NULL,
+  PRIMARY KEY (`cve_mun`,`cve_ent`),
+  UNIQUE KEY `cve_mun` (`cve_mun`,`cve_ent`),
+  KEY `cve_ent` (`cve_ent`),
+  CONSTRAINT `municipio_ibfk_1` FOREIGN KEY (`cve_ent`) REFERENCES `entidad` (`cve_ent`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of municipio
@@ -2618,12 +2619,12 @@ INSERT INTO `municipio` VALUES ('570', 'Zimatlán de Álvarez', '0001', 'Zimatl�
 -- Table structure for pais
 -- ----------------------------
 DROP TABLE IF EXISTS `pais`;
-CREATE TABLE `pais`  (
-  `id` varchar(2) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `nombre` varchar(64) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `fechaModificacion` timestamp NOT NULL DEFAULT current_timestamp ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+CREATE TABLE `pais` (
+  `id` varchar(2) NOT NULL,
+  `nombre` varchar(64) NOT NULL,
+  `fechaModificacion` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of pais
@@ -2634,22 +2635,20 @@ INSERT INTO `pais` VALUES ('MX', 'Mexico', '2019-12-06 21:37:36');
 -- Table structure for venta
 -- ----------------------------
 DROP TABLE IF EXISTS `venta`;
-CREATE TABLE `venta`  (
-  `id_venta` int NOT NULL AUTO_INCREMENT,
-  `id_inmueble` int NOT NULL,
-  `id_cliente` int NULL DEFAULT NULL,
-  `fecha_venta` date NULL DEFAULT NULL,
-  `total_iva` int NULL DEFAULT NULL,
-  `total_general` int NULL DEFAULT NULL,
-  `total_venta` int NULL DEFAULT NULL,
-  `forma_pago` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`id_venta`, `id_inmueble`) USING BTREE,
-  UNIQUE INDEX `fk_id_inmueble`(`id_inmueble`) USING BTREE,
-  CONSTRAINT `fk_id_inmueble` FOREIGN KEY (`id_inmueble`) REFERENCES `inmueble` (`id_inmueble`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+CREATE TABLE `venta` (
+  `id_venta` int(12) NOT NULL AUTO_INCREMENT,
+  `id_inmueble` int(12) NOT NULL,
+  `id_cliente` int(12) DEFAULT NULL,
+  `fecha_venta` date DEFAULT NULL,
+  `total_iva` int(12) DEFAULT NULL,
+  `total_general` int(12) DEFAULT NULL,
+  `total_venta` int(12) DEFAULT NULL,
+  `forma_pago` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id_venta`,`id_inmueble`),
+  UNIQUE KEY `fk_id_inmueble` (`id_inmueble`) USING BTREE,
+  CONSTRAINT `fk_id_inmueble` FOREIGN KEY (`id_inmueble`) REFERENCES `inmueble` (`id_inmueble`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of venta
 -- ----------------------------
-
-SET FOREIGN_KEY_CHECKS = 1;

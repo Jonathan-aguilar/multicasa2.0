@@ -11,7 +11,7 @@ if (mysqli_connect_errno($con))
 {
     $data_points = array();
     
-    $resultado = mysqli_query($con, "SELECT *  FROM inmueble");
+    $resultado = mysqli_query($con, "SELECT * FROM inmueble");
     
     while($renglon = mysqli_fetch_array($resultado))
     {        

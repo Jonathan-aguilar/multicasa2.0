@@ -15,7 +15,6 @@ $area = $_POST["area"];
 $email = $_POST["email"];
 $latitud = $_POST["latitud"];
 $longitud = $_POST["longitud"];
-
 //Rutas  donde se guardaran las imagenes
 $target_dir = "../uploads/";
 $imagen=$_FILES["exterior"]["tmp_name"];
@@ -31,7 +30,59 @@ $rutainterior2 = $target_dir . $encabezado . "_3." . $tipoarchivointerior2;
 $uploadOk = 1;
 //$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 // Check if image file is a actual image or fake image
-
+if(isset($_POST["submit"])) {
+    $check = getimagesize($_FILES["exterior"]["tmp_name"]);
+    $check2 = getimagesize($_FILES["interior1"]["tmp_name"]);
+    $check3 = getimagesize($_FILES["interior2"]["tmp_name"]);
+    if($check !== false && $check2 !== false && $check3 !== false) {
+        $uploadOk = 1;
+    } else {
+        $uploadOk = 0;
+    }
+}
+// Check if file already exists
+if (file_exists($rutaexterior) == true || file_exists($rutainterior1) == true || file_exists($rutainterior2) == true) {
+    echo '<script type="text/javascript">';
+    echo 'alert("Un archivo de imagen ya existe")';
+    echo '</script>';
+    $uploadOk = 0;
+}
+// Allow certain file formats
+if($tipoarchivoexterior != "jpg" && $tipoarchivoexterior != "png" && $tipoarchivoexterior != "jpeg" ) {
+    echo '<script type="text/javascript">';
+    echo 'alert("El archivo de imagen del interior no debe pesar mas de 5MB")';
+    echo '</script>';
+    $uploadOk = 0;
+}
+elseif($tipoarchivointerior1 != "jpg" && $tipoarchivointerior1 != "png" && $tipoarchivointerior1 != "jpeg") {
+    echo '<script type="text/javascript">';
+    echo 'alert("El archivo 1 de imagen del interior no debe pesar mas de 5MB")';
+    echo '</script>';
+    $uploadOk = 0;
+}
+elseif($tipoarchivointerior2 != "jpg" && $tipoarchivointerior2 != "png" && $tipoarchivointerior2 != "jpeg") {
+    echo '<script type="text/javascript">';
+    echo 'alert("El archivo 2 de imagen del interior no debe pesar mas de 5MB")';
+    echo '</script>';
+    $uploadOk = 0;
+}
+// Check if $uploadOk is set to 0 by an error
+if ($uploadOk == 0) {
+// if everything is ok, try to upload file
+} else {
+    if (move_uploaded_file($_FILES["exterior"]["tmp_name"], $rutaexterior)) {
+    } else {
+        //echo "Sorry, there was an error uploading your file.";
+    }
+    if (move_uploaded_file($_FILES["interior1"]["tmp_name"], $rutainterior1)) {
+    } else {
+        //echo "Sorry, there was an error uploading your file.";
+    }
+    if (move_uploaded_file($_FILES["interior2"]["tmp_name"], $rutainterior2)) {
+    } else {
+        //echo "Sorry, there was an error uploading your file.";
+    }
+}
 //Creacion de objetos para el insert
 $estatus = "En Venta";
 $obj = new inmueble($encabezado,$descripcion,$direccion,$costo,$recamaras,$baños,$estacionamientos,$estatus,$ciudad,$estado,$codigoPostal,$area,$email,$latitud,$longitud,$rutaexterior,$rutainterior1,$rutainterior2);
@@ -90,15 +141,15 @@ if($resultado == 1){
           <p>';
     $txt.=$descripcion;
     $txt.='</p>
-          <h5>descripcion</h5>
+          <h5>Dirección</h5>
           <p>';
     $txt.=$direccion;
     $txt.='</p>
-          <h5>direccion</h5>
+          <h5>Costo</h5>
           <p>';
     $txt.=$costo;
     $txt.='</p>
-          <h5>costo</h5>
+          <h5>Número de Recamaras</h5>
           <p>';
     $txt.=$recamaras;
     $txt.='</p>

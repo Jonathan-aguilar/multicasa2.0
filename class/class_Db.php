@@ -1,5 +1,8 @@
 <?php
-
+/**
+* Clase para la conexion de la bd
+*/
+//Para evitar redefinir la clase se pregunta si existe dicha clase
 if(class_exists('class_Db') != true)
 {
 	class class_Db{
@@ -7,10 +10,12 @@ if(class_exists('class_Db') != true)
 		var $db_name;
 		var $db_query;
 
-
+    	//Método mágico que se invoca solo, cuando el objeto se está construyendo
+    	//Para este caso, cuando el objeto se está construyendo se conecta a la
+    	//Base de Datos
     	function __construct(){
 
-        	$this->set_db("localhost","root","","multicasa");
+        	$this->set_db("127.0.0.1","root","","multicasa");
 
     	}
 

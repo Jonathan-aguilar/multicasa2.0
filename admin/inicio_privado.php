@@ -9,9 +9,8 @@
 	<link rel="stylesheet" type="text/css" href="css/estilosAdmin.css">
 	<link rel="stylesheet" type="text/css" href="../css/estilos.css">
 	<link rel="stylesheet" type="text/css" href="css/icon-down-open.css">
-	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap-grid.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 
 </head>
 <body>
@@ -28,8 +27,8 @@
 
 				<nav class="menu">
 					<ul>
-						<li><a href="location:admin/inicio_privado.php">Inicio</a></li>
-						<li><a href="">La compañia</a></li>
+						<li><a href="../admin/inicio_privado.php">Inicio</a></li>
+						<li><a href="../casas/casas.php">La compañia</a></li>
 						<li class="submenu"><a>Acciones<span class="icon-down-openarrow"></span></a>
 							<ul>
 								<li><a href="../alta_inmueble.php">Altas</a></li>
@@ -43,11 +42,7 @@
 								<li><a href="dashboard.php">Dashboard</a></li>
 							</ul>
 						</li>
-<<<<<<< HEAD
-						<li id="btn-admin"><a href="login.php">Admin</a></li> 
-=======
-						<li id="btn-admin"><a href="../index.php">Cerrar</a></li> 
->>>>>>> 206d3c6ef7bfd43a94b95da3be3b84587ed0e894
+						<li id="btn-admin"><a href="../inicio_publico.php">Cerrar</a></li> 
 					</ul> 
 				</nav> 
 			</div>
@@ -63,7 +58,38 @@
 					<img class="mySlides" src="../images/casa_3.jpg" style="width: 100%">
 				</div>
 			</div>
-			
+			<img class="colash" src="../images/colash_min_casas.png">
+
+			<h1 style="right: 27px; position: relative">BIENVENIDO</h1>
+			<h5>¡A nuestro sitio WEB MultiCasa!</h5>
+
+			<p>
+				Hello. In this tutorial i will show you how to create an elegant WordPress PSD theme. You can use this web template also for consulting agency templates, services websites, marketing website templates, business website templates, finance website templates. The design is very clean and can be modified very easy into a great template.
+
+
+				<br><br><br>
+
+				Hello. In this tutorial i will show you how to create an elegant WordPress PSD theme. You can use this web 
+				template also for consulting agency templates, services websites, marketing website templates, business 
+				website templates, finance website templates. The design is very clean and can be modified very easy into 
+				a great template..
+				<br><br>
+
+				Hello. In this tutorial i will show you how to create an elegant WordPress PSD theme. You can use this web 
+				template also for consulting agency templates, services websites, marketing website templates, business 
+				website templates, finance website templates. The design is very clean and can be modified very easy into 
+				a great template..
+
+				<br><br>
+				Hello. In this tutorial i will show you how to create an elegant WordPress PSD theme. You can use this web 
+				template also for consulting agency templates, services websites, marketing website templates, business 
+				website templates, finance website templates. The design is very clean and can be modified very easy into 
+				a great template..
+
+			</p>
+			<div class="embed-responsive embed-responsive-16by9">
+    		
+  			</div>
 		</main>
 
 		<aside class="sidebar-1">
@@ -81,38 +107,11 @@
 
 		<aside class="sidebar-2">
 			<?php 
-				include ('../aside-2.php');
-			?>
-
+				include ('aside-2.php');
+			?>			
 		</aside>
 
-		<footer class="footer">
-			<div class="logo-footer">
-				<img class="logo" src="../images/logotipo.png">
-			</div>
-			<div class="menuFooter">
-				<ul class="topnav1">
-					<h5 class="fotterh5">:</h5>
-					<li class="derecha"><a href="inicio_privado.php"> Inicio </a></li>
-					<h5 class="fotterh5">:</h5>
-					<li class="derecha"><a href="#"> Compra </a></li>
-					<h5 class="fotterh5">:</h5>
-					<li class="derecha"><a href="#"> onstruir </a></li>
-					<h5 class="fotterh5">:</h5>
-					<li class="derecha"><a href="#"> Venta </a></li>
-					<h5 class="fotterh5">:</h5>
-					<li class="derecha"><a href="#"> Mudanzas </a></li>
-					<h5 class="fotterh5">:</h5>
-					<li class="derecha"><a href="#"> Seguros </a></li>
-					<h5 class="fotterh5">:</h5>
-					<li class="derecha"><a href="#"> Contactos </a></li>
-					<div class="copyright">
-						<p>Bienes Raíces Multicasa © 2019</p>
-						<a href="politicas.php">Politicas De Privacidad</a>				
-					</div>
-				</ul>
-			</div>
-		</footer>
+
 	</div>
 
 </body>

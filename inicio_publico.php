@@ -21,13 +21,13 @@
 				</div>
 				<div class="menuHorizontal">
 					<ul class="topnav">
-						<li class="derecha"><a href="index.php">Inicio</a></li>
+						<li class="derecha"><a href="#">Inicio</a></li>
 						<li class="derecha"><a href="#">La Compañia</a></li>
-						<li class="derecha"><a href="reporepdf.php">Servicios</a></li>
+						<li class="derecha"><a href="#">Servicios</a></li>
 						<li class="derecha"><a href="contacto.php">Contacto</a></li>
 						<li class=" izquierda"><a href="login.php"><img class="incono-verde"src="images/icono_verde.png" >Admin.</a></li>
 						<li class=" izquierda"><a href="#"><img class="incono-verde"src="images/icono_verde.png" >Buscar</a></li>
-						<li class=" izquierda"><a href="index.php"><img class="incono-verde"src="images/icono_verde.png" >Inicio</a></li>
+						<li class=" izquierda"><a href="#"><img class="incono-verde"src="images/icono_verde.png" >Inicio</a></li>
 					</ul>
 				</div>
 		</header>
@@ -46,21 +46,32 @@
 			<h5>¡A nuestro sitio WEB MultiCasa!</h5>
 
 			<p>
-			bienvendido a bienes raices multicasa tu mejor opcion para comprar tu casa de ensueño 
+				Hello. In this tutorial i will show you how to create an elegant WordPress PSD theme. You can use this web template also for consulting agency templates, services websites, marketing website templates, business website templates, finance website templates. The design is very clean and can be modified very easy into a great template.
 
 
 				<br><br><br>
 
-				bienvendido a bienes raices multicasa tu mejor opcion para comprar tu casa de ensueño 
+				Hello. In this tutorial i will show you how to create an elegant WordPress PSD theme. You can use this web 
+				template also for consulting agency templates, services websites, marketing website templates, business 
+				website templates, finance website templates. The design is very clean and can be modified very easy into 
+				a great template..
 				<br><br>
 
-				bienvendido a bienes raices multicasa tu mejor opcion para comprar tu casa de ensueño 
+				Hello. In this tutorial i will show you how to create an elegant WordPress PSD theme. You can use this web 
+				template also for consulting agency templates, services websites, marketing website templates, business 
+				website templates, finance website templates. The design is very clean and can be modified very easy into 
+				a great template..
 
 				<br><br>
-				bienvendido a bienes raices multicasa tu mejor opcion para comprar tu casa de ensueño 
+				Hello. In this tutorial i will show you how to create an elegant WordPress PSD theme. You can use this web 
+				template also for consulting agency templates, services websites, marketing website templates, business 
+				website templates, finance website templates. The design is very clean and can be modified very easy into 
+				a great template..
 
 			</p>
-			
+			<div class="embed-responsive embed-responsive-16by9">
+    		
+  			</div>
 		</main>
 
 		<aside class="sidebar-1">
@@ -88,7 +99,7 @@
 			</div>
 			<div class="menuFooter">
 				<ul class="topnav">
-					<li class="derecha"><a href="index.php">Inicio</a></li>
+					<li class="derecha"><a href="#">Inicio</a></li>
 					<h5 class="fotterh5">:</h5>
 					<li class="derecha"><a href="#"> Compra </a></li>
 					<h5 class="fotterh5">:</h5>
@@ -100,7 +111,7 @@
 					<h5 class="fotterh5">:</h5>
 					<li class="derecha"><a href="#"> Seguros </a></li>
 					<h5 class="fotterh5">:</h5>
-					<li class="derecha"><a href="contacto.php"> Contactos </a></li>
+					<li class="derecha"><a href="#"> Contactos </a></li>
 					<div class="copyright">
 						<p>Bienes Raíces Multicasa © 2019</p>
 						<a href="politicas.php">Politicas De Privacidad</a>				

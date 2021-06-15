@@ -23,13 +23,13 @@
                 </div>
                 <div class="menuHorizontal">
                     <ul class="topnav">
-                        <li class="derecha"><a href="index.php">Inicio</a></li>
+                        <li class="derecha"><a href="inicio_publico.php">Inicio</a></li>
                         <li class="derecha"><a href="#">La Compañia</a></li>
                         <li class="derecha"><a href="#">Servicios</a></li>
                         <li class="derecha"><a href="#">Requisitos</a></li>
                         <li class=" izquierda"><a href="login.php"><img class="incono-verde"src="images/icono_verde.png" >Admin.</a></li>
                         <li class=" izquierda"><a href="#"><img class="incono-verde"src="images/icono_verde.png" >Buscar</a></li>
-                        <li class=" izquierda"><a href="index.php"><img class="incono-verde"src="images/icono_verde.png" >Inicio</a></li>
+                        <li class=" izquierda"><a href="inicio_publico.php"><img class="incono-verde"src="images/icono_verde.png" >Inicio</a></li>
                     </ul>
                 </div>
             </header>
@@ -316,7 +316,7 @@
                 </div>
                 <div class="menuFooter">
                     <ul class="topnav">
-                        <li class="derecha"><a href="index.php">Inicio</a></li>
+                        <li class="derecha"><a href="inicio_publico.php">Inicio</a></li>
                         <h5 class="fotterh5">:</h5>
                         <li class="derecha"><a href="#"> Compra </a></li>
                         <h5 class="fotterh5">:</h5>

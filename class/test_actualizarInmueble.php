@@ -8,10 +8,9 @@
 	$email = $_POST['email'];
 	$id_inmu = $_POST['id_inmu'];
 	$estatus = $_POST['estatus'];
-	$costo = $_POST['costo_inmueble'];
 
 	$obj = new inmueble_dal();
-	$resultado = $obj->actualizar($id_inmu,$encabezado,$descripcion,$costo,$email,$estatus, $costo);
+	$resultado = $obj->actualizar($id_inmu,$encabezado,$descripcion,$costo,$email,$estatus);
 
 	if($resultado){
 		header('location: ../modificar_inmueble.php');

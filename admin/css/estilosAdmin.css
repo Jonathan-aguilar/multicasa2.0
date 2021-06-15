@@ -113,11 +113,7 @@
   }
 
 }
-/*--- SIdebar 2-----*/
-.sidebar-2 input{
-  background: #10476b;
-  color: #5492b1;sad
-}
+
 /*---------------FOOTER------------------------------------------------------------------------------*/
 .logo-footer{
     float: left;
@@ -128,7 +124,7 @@
 }
 .menuFooter h5.fotterh5  {
   color: orange;
-  padding-top: 7px;
+  padding-top: 14px;
   float: left;
 }
 .menuFooter a{
@@ -155,7 +151,6 @@
   color: white;
   text-align: center;
   padding: 14px 16px;
-  margin-top: 9px;
   text-decoration: underline;
 }
 

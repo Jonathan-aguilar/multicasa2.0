@@ -22,17 +22,13 @@
 			</div>
 			<div class="menuHorizontal">
 				<ul class="topnav">
-<<<<<<< HEAD
 					<li class="derecha"><a href="admin/inicio_privado.php">Inicio</a></li>
 					<li class="derecha"><a href="#">La Compañia</a></li>
 					<li class="derecha"><a href="#">Servicios</a></li>
 					<li class="derecha"><a href="#">Requisitos</a></li>
-					<li class=" izquierda"><a href="login.php"><img class="incono-verde"src="images/icono_verde.png" >Admin.</a></li>
+					<li class=" izquierda"><a href="admin/inicio_privado.php"><img class="incono-verde"src="images/icono_verde.png" >Admin.</a></li>
 					<li class=" izquierda"><a href="#"><img class="incono-verde"src="images/icono_verde.png" >Buscar</a></li>
 					<li class=" izquierda"><a href="admin/inicio_privado.php"><img class="incono-verde"src="images/icono_verde.png" >Inicio</a></li>
-=======
-					
->>>>>>> 206d3c6ef7bfd43a94b95da3be3b84587ed0e894
 				</ul>
 			</div>
 		</header>
@@ -66,7 +62,7 @@
 			</div>
 			<div class="menuFooter">
 				<ul class="topnav">
-					<li class="derecha"><a href="admin/inicio_privado.php">Inicio</a></li>
+					<li class="derecha"><a href="#">Inicio</a></li>
 					<h5 class="fotterh5">:</h5>
 					<li class="derecha"><a href="#"> Compra </a></li>
 					<h5 class="fotterh5">:</h5>
@@ -100,6 +96,7 @@ function alerta() {
   }
 }	
 </script>
+
 <script src="js/jquery-1.12.3.js"></script>
 <script src="js/jquery.dataTables.min.js"></script>
 <script src="bootstrap/js/dataTables.bootstrap.js"></script>
@@ -112,4 +109,5 @@ function alerta() {
 <script type="text/javascript" src="js/vfs_fonts.js"></script>
 <script type="text/javascript" src="js/buttons.html5.min.js"></script>
 <script type="text/javascript" src="js/buttons.print.min.js"></script>
+
 </html>

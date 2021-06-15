@@ -52,11 +52,7 @@
 						<li class="derecha"><a href="#">La Compañia</a></li>
 						<li class="derecha"><a href="#">Servicios</a></li>
 						<li class="derecha"><a href="#">Requisitos</a></li>
-<<<<<<< HEAD
-						<li class=" izquierda"><a href="inicio_privado"><img class="incono-verde"src="../images/icono_verde.png" >Admin.</a></li>
-=======
 						<li class=" izquierda"><a href="inicio_privado.php"><img class="incono-verde"src="../images/icono_verde.png" >Admin.</a></li>
->>>>>>> 206d3c6ef7bfd43a94b95da3be3b84587ed0e894
 						<li class=" izquierda"><a href="#"><img class="incono-verde"src="../images/icono_verde.png" >Buscar</a></li>
 						<li class=" izquierda"><a href="inicio_privado.php"><img class="incono-verde"src="../images/icono_verde.png" >Inicio</a></li>
 					</ul>
@@ -78,7 +74,6 @@
 									<th>Estado</th>
 									<th>Area del Terreno </th>
 									<th>Estatus</th>
-									<th>PRECIO</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -92,13 +87,12 @@
 										<td><?php echo $mostrar['direccion'] ?></td>
 										<td><?php echo $mostrar['costo_inmueble'] ?></td>
 										<td><?php echo $mostrar['recamaras'] ?></td>
-										<td><?php echo $mostrar['baños'] ?></td>
+										<td><?php echo $mostrar['banos'] ?></td>
 										<td><?php echo $mostrar['estacionamientos'] ?></td>
 										<td><?php echo $mostrar['ciudad'] ?></td>
 										<td><?php echo $mostrar['estado'] ?></td>
 										<td><?php echo $mostrar['area_terreno'] ?></td>
 										<td><?php echo $mostrar['estatus'] ?></td>
-										<td><?php echo $mostrar['costo_inmueble'] ?></td>
 									</tr>
 									<?php 
 								}
@@ -115,7 +109,7 @@
 				</div>
 				<div class="menuFooter">
 					<ul class="topnav">
-						<li class="derecha"><a href="inicio_privado.php">Inicio</a></li>
+						<li class="derecha"><a href="#">Inicio</a></li>
 						<h5 class="fotterh5">:</h5>
 						<li class="derecha"><a href="#"> Compra </a></li>
 						<h5 class="fotterh5">:</h5>
@@ -130,7 +124,7 @@
 						<li class="derecha"><a href="#"> Contactos </a></li>
 						<div class="copyright">
 							<p>Bienes Raíces Multicasa © 2019</p>
-							<a href="../politicas.php">Politicas De Privacidad</a>				
+							<a href="">Politicas De Privacidad</a>				
 						</div>
 					</ul>
 				</div>

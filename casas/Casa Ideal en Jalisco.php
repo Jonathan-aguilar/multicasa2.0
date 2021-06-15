@@ -33,40 +33,44 @@
         <div class="row">
 
         <div>
-          <a href="casa/Casa 2 pisos.php">
-            <img class="img-fluid rounded mb-3 mb-md-0" src="../uploads/Casa 2 pisos_1." alt="">
+          <a href="casa/Casa Ideal en Jalisco.php">
+            <img class="img-fluid rounded mb-3 mb-md-0" src="../uploads/Casa Ideal en Jalisco_1.jpg" alt="">
           </a>
         </div>
         <div>
-          <h3>Casa 2 pisos</h3>
+          <h3>Casa Ideal en Jalisco</h3>
           <h5>Descricpión</h5>
-          <p>da</p>
-          <h5>descripcion</h5>
-          <p>abel barragan #15</p>
-          <h5>direccion</h5>
-          <p>500000</p>
-          <h5>costo</h5>
-          <p>4</p>
+          <p>Casa en venta en Fraccionamiento Castaños Sur
+La casa cuenta con una planta baja y una planta alta, cuenta con espacio para 2 autos al exterior, sala, comedor, 4 recamaras, 2 1/2 baños completo, lavandería techada, jardín amplio.
+Terreno: 348 m2
+Construcción: 285 m2.
+$3,950,000 (Esta casa incluye cocina integral, closets, muebles de baño.)</p>
+          <h5>Dirección</h5>
+          <p>Fraccionamiento Castaños Sur, Jalisco #4800</p>
+          <h5>Costo</h5>
+          <p>3950000</p>
+          <h5>Número de Recamaras</h5>
+          <p>2</p>
           <h5>Número de Baños</h5>
-          <p>2</p>
+          <p>1</p>
           <h5>Número de Estacionamientos</h5>
-          <p>2</p>
+          <p>3</p>
           <h5>Ciudad</h5>
-          <p>Axapusco</p>
+          <p>Guadalajara</p>
           <h5>Estado</h5>
-          <p>México</p>
+          <p>Jalisco</p>
           <h5>Código Postal</h5>
-          <p>25120</p>
+          <p>25130</p>
           <h5>Área del terreno (m2)</h5>
-          <p>150</p>
+          <p>250</p>
           <h5>Email de vendedor</h5>
-          <p>Jhonnyaguilar1797@gmail.com</p>
+          <p>ruben7.70@hotmail.com</p>
           <h5>Vista Interior</h5>
           <a href="#">
-            <img class="img-fluid rounded mb-3 mb-md-0" src="../uploads/Casa 2 pisos_2." alt="">
+            <img class="img-fluid rounded mb-3 mb-md-0" src="../uploads/Casa Ideal en Jalisco_2.jpg" alt="">
           </a>
           <a href="#">
-            <img class="img-fluid rounded mb-3 mb-md-0" src="../uploads/Casa 2 pisos_3." alt="">
+            <img class="img-fluid rounded mb-3 mb-md-0" src="../uploads/Casa Ideal en Jalisco_3.jpg" alt="">
           </a>
           <br>
           <h5>Ubicación</h5>
@@ -108,8 +112,8 @@
 <script src="../js/alta_inmueble.js"></script>
 <script src="../leaflet/leaflet.js"></script>
 <script type="text/javascript">
-              var mymap = L.map("mapid").setView([20000, 200000], 13);
-              var marker = L.marker([20000, 200000]).addTo(mymap);
+              var mymap = L.map("mapid").setView([20.659909, -103.346312], 13);
+              var marker = L.marker([20.659909, -103.346312]).addTo(mymap);
             L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoicnViZW43NzAiLCJhIjoiY2szeWVyemoyMWprcDN0bXJiYzg3ZmFmOSJ9.eKgxDGg_IGpP0N_6QlaQHA", {
     attribution: "Map data &copy; <a href=`https://www.openstreetmap.org/`>OpenStreetMap</a> contributors, <a href=`https://creativecommons.org/licenses/by-sa/2.0/`>CC-BY-SA</a>, Imagery © <a href=`https://www.mapbox.com/`>Mapbox</a>",
     maxZoom: 18,

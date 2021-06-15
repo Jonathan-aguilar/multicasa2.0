@@ -67,6 +67,9 @@ $2,150,000 (Esta casa incluye lámparas de techo, closets, muebles de baño.)</p
           <p>ruben.campos@uadec.edu.mx</p>
           <h5>Vista Interior</h5>
           <a href="#">
+            <img class="img-fluid rounded mb-3 mb-md-0" src="../uploads/Mega Mansión_1.jpg" alt="">
+          </a>
+          <a href="#">
             <img class="img-fluid rounded mb-3 mb-md-0" src="../uploads/Mega Mansión_2.jpg" alt="">
           </a>
           <a href="#">

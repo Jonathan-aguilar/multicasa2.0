@@ -3,7 +3,6 @@
 	require 'conexion.php';
 	
 	$pdf = new PDF();
-	
 	$pdf->AliasNbPages();
 	$pdf->AddPage();
 	
