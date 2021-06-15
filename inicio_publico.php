@@ -16,8 +16,7 @@
 			<div class="logo-empresa">
 				<img class="logotipo" src="images/logo.png" style="width: 48%">
 				<img class="tel" src="images/tel.png" style="width: 18.3%">
-				<!--<h1>&nbsp;&nbsp;BIENES RAICES MULTICASA</h1>
-					<h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TU MEJOR OPCIÓN EN AGENCIA DE BIENES RAICES</h5>-->
+				
 				</div>
 				<div class="menuHorizontal">
 					<ul class="topnav">
